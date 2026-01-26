@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 export default function Questions() {
   const { roleId } = useParams();
 
-  // find role label
   const roleExists = roles.find(function (role) {
     return role.id === roleId;
   });
@@ -17,7 +16,6 @@ export default function Questions() {
 
   const roleLabel = roleExists.label;
 
-  // find questions for role
   const roleQuestions = questions.find(function (q) {
     return q.role === roleLabel;
   });
@@ -28,10 +26,9 @@ export default function Questions() {
 
   const flashcards = roleQuestions.flashcards;
 
-  // 👇 use INDEX, not ID
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [finished, setFinished] = useState(false);
 
-  // reset when role changes
   useEffect(function () {
     setCurrentIndex(0);
   }, [roleId]);
@@ -43,7 +40,7 @@ export default function Questions() {
       setCurrentIndex(currentIndex + 1);
     }
     else {
-      console.log("No more questions...");
+      setFinished(true);
     }
   }
 
@@ -51,24 +48,26 @@ export default function Questions() {
     <>
       <h1>{roleLabel} Questions</h1>
 
-      <section className="question-section">
-        <div>
-          <section className="question-title">
-            Question {currentIndex + 1}: {currentQuestion.question}
-          </section>
-
-          <section className="question-choices">
-            <div>A: {currentQuestion.options.A}</div>
-            <div>B: {currentQuestion.options.B}</div>
-            <div>C: {currentQuestion.options.C}</div>
-            <div>D: {currentQuestion.options.D}</div>
-          </section>
+      {finished ? (
+        <div className="no-more-questions">
+          You have completed all questions!
         </div>
-      </section>
-
-      <button onClick={goToNextQuestion}>
-        Next
-      </button>
+      ) : (
+        <section className="question-section">
+          <div>
+            <section className="question-title">
+              Question {currentIndex + 1}: {flashcards[currentIndex].question}
+            </section>
+            <section className="question-choices">
+              <div>A: {flashcards[currentIndex].options.A}</div>
+              <div>B: {flashcards[currentIndex].options.B}</div>
+              <div>C: {flashcards[currentIndex].options.C}</div>
+              <div>D: {flashcards[currentIndex].options.D}</div>
+            </section>
+          </div>
+          <button onClick={goToNextQuestion}>Next</button>
+        </section>
+      )}
     </>
   );
 }
