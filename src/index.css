@@ -13,42 +13,41 @@
   --font-body: "Nunito Sans", sans-serif;
   --font-heading: "Edu SA Beginner", cursive;
 
-  /* 📏 Responsive Font Sizes (1rem = 10px baseline) */
-  --font-size-xs: clamp(0.75rem, 0.7rem + 0.5vw, 0.875rem); /* 7.5px → 8.75px */
-  --font-size-sm: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);    /* 8.75px → 10px */
-  --font-size-md: clamp(1rem, 0.9rem + 0.8vw, 1.125rem);    /* 10px → 11.25px */
-  --font-size-lg: clamp(1.25rem, 1.1rem + 1vw, 1.5rem);     /* 12.5px → 15px */
-  --font-size-xl: clamp(1.5rem, 1.3rem + 1.2vw, 2rem);      /* 15px → 20px */
-  --font-size-2xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);       /* 20px → 30px */
-  --font-size-3xl: clamp(2.5rem, 2rem + 2vw, 4rem);         /* 25px → 40px */
+  /* 📏 Font Sizes (multiples of 4px) */
+--font-size-xs: clamp(0.8rem, 0.7rem + 0.5vw, 0.8rem);   /* 8px */
+--font-size-sm: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);     /* 10px → 12px */
+--font-size-md: clamp(1.2rem, 1.1rem + 0.8vw, 1.6rem);   /* 12px → 16px */
+--font-size-lg: clamp(1.6rem, 1.4rem + 1vw, 2rem);       /* 16px → 20px */
+--font-size-xl: clamp(2rem, 1.8rem + 1.2vw, 2.4rem);     /* 20px → 24px */
+--font-size-2xl: clamp(2.4rem, 2rem + 1.5vw, 3.2rem);    /* 24px → 32px */
+--font-size-3xl: clamp(3.2rem, 2.6rem + 2vw, 4rem);      /* 32px → 40px */
 
-  /* 🔤 Heading Styles (size + weight) */
-  --h1-size: clamp(3.6rem, 3rem + 2vw, 5.4rem); /* up to 54px */
-  --h1-weight: 700;
-  --h2-size: clamp(2.8rem, 2.4rem + 1.5vw, 4.2rem); /* up to 42px */
-  --h2-weight: 600;
-  --h3-size: clamp(2.2rem, 2rem + 1vw, 3.2rem); /* up to 32px */
-  --h3-weight: 600;
-  --h4-size: clamp(1.8rem, 1.6rem + 0.8vw, 2.4rem); /* up to 24px */
-  --h4-weight: 500;
-  --p-size: clamp(1.2rem, 1rem + 0.5vw, 1.6rem);
-  --p-weight: 500;
+/* 🔤 Heading Styles (aligned to 4px grid) */
+--h1-size: clamp(3.6rem, 3rem + 2vw, 5.6rem); /* 36px → 56px */
+--h1-weight: 700;
+--h2-size: clamp(2.8rem, 2.4rem + 1.5vw, 4rem); /* 28px → 40px */
+--h2-weight: 600;
+--h3-size: clamp(2.4rem, 2rem + 1vw, 3.2rem);   /* 24px → 32px */
+--h3-weight: 600;
+--h4-size: clamp(2rem, 1.6rem + 0.8vw, 2.4rem); /* 20px → 24px */
+--h4-weight: 500;
+--p-size: clamp(1.2rem, 1rem + 0.5vw, 1.6rem);  /* 12px → 16px */
+--p-weight: 500;
 
+/* 📐 Spacing (4px multiples) */
+--space-xs: 0.4rem;   /* 4px */
+--space-sm: 0.8rem;   /* 8px */
+--space-md: 1.2rem;   /* 12px */
+--space-lg: clamp(1.6rem, 2vw, 2rem); /* 16px → 20px */
+--space-xl: 3.2rem;   /* 32px */
+--margin-inline-base: clamp(0.8rem, 5vw, 2.4rem); /* 8px → 24px */
+--margin-block-base: clamp(0.8rem, 5vh, 2.4rem);  /* 8px → 24px */
 
-  /* 📐 Spacing */
-  --space-xs: 0.25rem;
-  --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: clamp(1.2rem, 2vw, 2.5rem);
-  --space-xl: 4rem;
-  --margin-inline-base: clamp(1rem, 5vw, 3rem);
-  --margin-block-base: clamp(1rem, 5vh, 3rem); /* ✅ added for body margins */
-
-  /* 🟦 Border Radius */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
+/* 🟦 Border Radius (4px multiples) */
+--radius-sm: 0.4rem;  /* 4px */
+--radius-md: 0.8rem;  /* 8px */
+--radius-lg: 1.2rem;  /* 12px */
+--radius-full: 9999px;
 
   /* 🌗 Shadows */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
