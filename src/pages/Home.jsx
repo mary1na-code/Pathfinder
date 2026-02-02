@@ -5,17 +5,16 @@
 export default function App() {
   return (
     <main className="min-h-screen bg-background text-text font-body">
-      {/* Top bar */}
-      <header className="max-w-7xl mx-auto px-margin-inline-base py-space-sm flex items-center justify-between">
-        <div className="text-sm font-semibold uppercase text-primary">LEVEL UP YOUR CAREER</div>
-        <nav className="space-x-4">
-          <button className="inline-flex items-center gap-2 bg-primary text-white px-md py-sm rounded-md">
-            Get Started <ArrowRightIcon className="w-4 h-4" />
-          </button>
-        </nav>
-      </header>
-
       {/* Hero */}
+      <section className="max-w-7xl mx-auto px-margin-inline-base py-space-sm flex items-center justify-between">
+        <div className="text-sm font-semibold uppercase text-primary">LEVEL UP YOUR CAREER</div>
+        <img 
+        src="../assets/hero-image.png" alt="Hero illustration for interview prep"
+        className="w-80 h-96 object-cover rounded-md p-md"
+        loading="lazy"/>
+      </section>
+
+      
       <section className="max-w-7xl mx-auto px-margin-inline-base py-space-xl grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center">
         {/* Left column */}
         <div className="md:col-span-7">
@@ -68,14 +67,13 @@ export default function App() {
             Know immediately if you're right or wrong, with clear rationale to help you improve as you go.
           </p>
         </div>
-      </section>
 
-      {/* CTA footer */}
-      <footer className="max-w-7xl mx-auto px-margin-inline-base py-space-xl flex justify-center">
-        <button className="bg-primary text-white px-xxl py-md rounded-md font-semibold">
-          Get Started
-        </button>
-      </footer>
+        <div className="max-w-7xl mx-auto px-margin-inline-base py-space-xl flex justify-center">
+          <button className="bg-primary text-white px-xxl py-md rounded-md font-semibold">
+            Get Started
+          </button>
+        </div>
+      </section>
     </main>
   );
 }
