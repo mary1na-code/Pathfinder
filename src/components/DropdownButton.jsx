@@ -1,6 +1,6 @@
 // src/components/DropdownButton.jsx
 import React, { useState, useRef, useEffect } from "react";
-import arrow from "../assets/curly arror img.png";
+import arrow from "../assets/curly-arror-img.png";
 import clsx from "clsx";
 
 export default function DropdownButton({ items = [], onSelect }) {
