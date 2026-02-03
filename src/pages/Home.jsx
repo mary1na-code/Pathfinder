@@ -1,7 +1,5 @@
 
 
-// import { ArrowRightIcon } from "@heroicons/react/24/solid";
-
 export default function App() {
   return (
     <main className="min-h-screen bg-background text-text font-body">
@@ -45,7 +43,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Features row */}
+      {/* Features Card row */}
       <section className="max-w-7xl mx-auto px-margin-inline-base py-space-xl grid grid-cols-1 md:grid-cols-3 gap-space-lg">
         <div className="p-md rounded-lg shadow-md bg-surface">
           <h3 className="text-lg font-semibold">Confidence Booster</h3>
