@@ -45,12 +45,15 @@ export default function App() {
 
       {/* Features Card row */}
       <section className="max-w-7xl mx-auto px-margin-inline-base py-space-xl grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-        <div className="p-md rounded-lg shadow-md bg-surface">
-          <h3 className="text-lg font-semibold">Confidence Booster</h3>
-          <p className="mt-space-sm text-md text-muted">
-            Practise one question at a time in a focused flashcard flow that builds comfort and interview readiness.
-          </p>
-        </div>
+        <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm transform hover:scale-105 transition">
+      <h2 className="text-xl font-bold flex items-center gap-2 mb-2">
+        <span role="img" aria-label="flexed bicep">💪</span>
+        Confidence Booster
+      </h2>
+      <p className="text-gray-600">
+        Practise one question at a time in a focused flashcard flow that builds comfort and interview readiness.
+      </p>
+    </div>
 
         <div className="p-md rounded-lg shadow-md bg-surface">
           <h3 className="text-lg font-semibold">Targeted Practise Questions</h3>
