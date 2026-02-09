@@ -10,8 +10,8 @@ export default function Questions()
   const { roleId } = useParams();
   const [selectedKey, setSelectedKey] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [wrongGuesses, setWrongGuesses] = useState([]); // Track keys of wrong guesses
-  const [showAnswer, setShowAnswer] = useState(false); // New: Force reveal after 3 tries
+  const [wrongGuesses, setWrongGuesses] = useState([]);
+  const [showAnswer, setShowAnswer] = useState(false);
     const roleExists = roles.find(function (role) {
     return role.id === roleId;
   });
@@ -32,11 +32,9 @@ export default function Questions()
   
   const flashcards = roleQuestions.flashcards;
   
-  // Use states
   const [currentIndex, setCurrentIndex] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
   
-  // Creates a shallow copy of questions whilst adding a new property with values called shuffledOptions. All other properties still exist
   function shuffleOptions(question) {
     const optionsArray = Object.entries(question.options);
     
@@ -46,8 +44,8 @@ export default function Questions()
     }
     
     return { 
-      ...question, // Created copy to not affect original data
-      shuffledOptions: optionsArray // New property
+      ...question,
+      shuffledOptions: optionsArray 
     };
   }
   
@@ -77,35 +75,29 @@ export default function Questions()
   }
   
   function handleSelect(key) {
-  // Don't allow changing selection if the answer is already revealed
   if (showAnswer) return;
   setSelectedKey(key);
 }
 
 function clickHandler() {
   if (!showAnswer) {
-    // PHASE 1: User clicked "Submit"
     const isCorrect = selectedKey === currentQuestion.answer;
 
     if (isCorrect) {
       setShowAnswer(true);
     } else {
-      // It's wrong! Add to strikes
       if (!wrongGuesses.includes(selectedKey)) {
         const newStrikes = [...wrongGuesses, selectedKey];
         setWrongGuesses(newStrikes);
         
-        // Reset selection so they have to pick a new one
         setSelectedKey(null); 
 
-        // If this was the 3rd wrong guess, reveal the truth
         if (newStrikes.length >= 3) {
           setShowAnswer(true);
         }
       }
     }
   } else {
-    // PHASE 2: User clicked "Next Question"
     if (currentIndex < shuffledQuestions.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setSelectedKey(null);

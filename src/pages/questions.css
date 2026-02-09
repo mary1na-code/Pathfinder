@@ -56,23 +56,22 @@
 }
 
 .choice.selected {
-  background-color: #e2eafa; /* Light blue highlight */
+  background-color: #e2eafa;
   border-color: #2563eb;
 }
 
 .choice.correct {
-  background-color: #dcfce7; /* Green */
+  background-color: #dcfce7;
   border-color: #16a34a;
   color: #16a34a;
 }
 
 .choice.wrong {
-  background-color: #fee2e2; /* Red */
+  background-color: #fee2e2;
   border-color: #dc2626;
   color: #dc2626;
 }
 
-/* Disable hover if already submitted */
 .choice:hover:not(.correct):not(.wrong) {
   background-color: #f3f4f6;
 }
