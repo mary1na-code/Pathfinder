@@ -1,58 +1,73 @@
-import Button from "../components/Pri-Button.jsx"
+import Button from "../components/Pri-Button.jsx";
 import CardHomepage from "../components/CardHomepage.jsx";
+import hero from "../assets/hero-image.png";
 
-export default function App() {
+export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-text font-body">
-      {/* Hero */}
-      <section className="max-w-7xl mx-auto px-margin-inline-base py-space-sm flex items-center justify-between">
-        <div className="text-sm font-semibold uppercase text-primary">LEVEL UP YOUR CAREER</div>
-        <img 
-        src="../assets/hero-image.png" alt="Hero illustration for interview prep"
-        className="w-80 h-96 object-cover rounded-md p-md"
-        loading="lazy"/>
+    <main className="max-w-screen flex flex-col gap-[var(--space-xl)] bg-background text-text font-body ">
+
+      <section className="flex flex-col">
+    		<div className="flex flex-row md:flex-col sm:flex-col gap-8 sec-1_imagetext_container">
+    			<div className="w-[60%] md:w-full sec-1_text-container ">
+    				{/* Level up tag */}
+    				<div className="levelup-tag">
+      				<p className="levelup-tag-text">LEVEL UP YOUR CAREER</p>
+    				</div>
+    				<h1>
+      				Scrum your way to a confident interview with role-based flashcards.
+    				</h1>
+    				<p className="mt-space-md text-lg text-text font-medium">
+      				Level up with Chingus worldwide! practise anytime, anywhere!
+    				</p>
+  				</div>
+					<div className="w-[50%] md:w-full">
+						<img
+    					src={hero}
+    					alt="Hero illustration for interview prep"
+    					className="w-full object-contain md:object-cover rounded-md p-md mt-8"
+    					loading="lazy"
+  					/>
+					</div>
+  			</div>
+
+  		  <div className="mt-space-lg flex gap-space-sm">
+      	  <Button to="/roles">Get Started</Button>
+    	  </div>
+
       </section>
-
       
-      <section className="max-w-7xl mx-auto px-margin-inline-base py-space-xl grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center">
-        {/* Left column */}
-        <div className="md:col-span-7">
-          <h1 className="font-heading text-h1 leading-tight text-primary">
-            Scrum your way to a confident interview with role-based flashcards.
-          </h1>
-          <p className="mt-space-md text-lg text-text font-medium">
-            Level up with Chingus worldwide! practise anytime, anywhere!
-          </p>
 
-          <div className="mt-space-lg flex gap-space-sm">
+      <section className="px-margin-inline-base py-space-xl flex flex-col md:flex-col gap-[var(--space-xl)]">
 
-            <Button to="/roles">Get Started</Button>
-
-          </div>
-        </div>
-
-        {/* Right column - blank card area for manual image placement */}
-        <div className="md:col-span-5 flex items-center justify-center">
-          <div
-            className="w-80 h-96 rounded-lg border-2 border-dashed border-secondary"
-            aria-hidden="true"
-            title="Card image placeholder - drop your image here manually"
+        {/* Features Card row */}
+        <div className="flex flex-row md:flex-col lg:flex-col gap-[var(--space-md)]">
+        {/* Card-1 */}
+          <CardHomepage 
+            emoji="💪"
+            title="Confidence Booster"
+            description="Practise one question at a time in a focused flashcard flow that builds comfort and interview readiness."
+          />
+          <CardHomepage 
+            emoji="🎯"
+            title="Targeted Practise Questions"
+            description="Select your Scrum role and get questions tailored to your specific role."
+          />
+          <CardHomepage 
+            emoji="⚡"
+            title="Instant Feedback"
+            description="Know immediately if you’re right or wrong, with clear rationale to help you improve as you go."
           />
         </div>
-      </section>
 
-      {/* Features Card row */}
-      <section className="max-w-7xl mx-auto px-margin-inline-base py-space-xl grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-
-        <CardHomepage />
-        
         {/* Second button */}
         <div className="max-w-7xl mx-auto px-margin-inline-base py-space-xl flex justify-center">
-
           <Button to="/roles">Get Started</Button>
-
         </div>
       </section>
     </main>
+
+    
   );
+
+  
 }
