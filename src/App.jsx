@@ -3,6 +3,7 @@ import Home from "./pages/Home.jsx";
 import Questions from "./pages/Questions.jsx";
 import Roles from "./pages/Roles.jsx";
 import Results from "./pages/Results.jsx";
+import ChatBox from "./components/ChatBox.jsx";
 import Layout from "./components/Layout.jsx";       
 
 export default function App() {
@@ -16,6 +17,9 @@ export default function App() {
                 }
                 <Route path="/results" element={<Results />} />
             </Routes>
+            <div style={{ display: "flex", justifyContent: "center", marginTop: "2rem" }}>
+                <ChatBox />
+            </div>
         </>
     )
 }
