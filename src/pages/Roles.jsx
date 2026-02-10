@@ -93,8 +93,8 @@ export default function Roles() {
                     onClick={() => handleRoleSelect(role.id)}
                     className="
                       w-full h-[66px]
-                       py-4
-                       flex justify-center items-center
+                      py-4
+                      flex justify-center items-center
                       rounded-2xl
                       border-4 border-[#B2C8F8]
                       bg-white
