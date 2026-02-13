@@ -22,8 +22,9 @@ export default function Footer() {
         {/* Main content: Meet the Team */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-space-lg">
           {/* Center column: heading + lists */}
+
           <div className="w-full md:w-2/3">
-            <h2 className="font-heading text-2xl md:text-3xl lg:text-h1 font-semibold mb-space-md">
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-h1 font-semibold mb-space-md footer-heading">
               Meet the Team
             </h2>
 

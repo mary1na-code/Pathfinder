@@ -71,13 +71,20 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   line-height: 1.6;
-  margin-inline: var(--margin-inline-base);
   margin-block: var(--margin-block-base);
   font-size: var(--p-size);
   font-weight: var(--p-weight);
   max-width: 100%;
 }
-    
+
+header{
+  margin-inline: var(--margin-inline-base);
+}
+
+.main-content {
+  margin-inline: var(--margin-inline-base);
+}
+ 
 p {
   font-size: var(--p-size);
   font-weight: var(--p-weight);
@@ -110,6 +117,10 @@ h4 {
   font-size: var(--h4-size);
   font-weight: var(--h4-weight);
   line-height: 1.5;
+}
+
+i{
+  color: var(--color-primary);
 }
 
 nav {
@@ -166,12 +177,19 @@ button {
 
 
 
-/* .card {
-  width: 80%;
-  max-width: 300px;
-  border-radius: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
+/* FOOTER */
+footer {
+  background-color: var(--color-primary);
+  color: white;
+  padding-block: var(--space-xl);
+  padding-inline: var(--margin-inline-base);
+  margin-top: var(--space-xl);
+  
+}
+
+.footer-heading{
+  
+}
 
 @media screen and (min-width: 640px) {
   .features-cards-container{
