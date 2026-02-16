@@ -1,3 +1,6 @@
+
+
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white font-body p-4 text-center">
