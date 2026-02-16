@@ -1,6 +1,4 @@
 
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
 import { roles } from "../data/roles.js";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
