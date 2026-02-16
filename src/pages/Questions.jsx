@@ -50,15 +50,21 @@ export default function Questions() {
     };
   }
 
-  useEffect(
-    function () {
-      const shuffled = flashcards.map(shuffleOptions);
-      setShuffledQuestions(shuffled);
-      setCurrentIndex(0);
-      setFirstAttempts([])
-    },
-    [roleId],
-  );
+  useEffect(() => {
+  const questionsCopy = [...flashcards];
+
+  for (let i = questionsCopy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questionsCopy[i], questionsCopy[j]] = [questionsCopy[j], questionsCopy[i]];
+  }
+
+  const shuffled = questionsCopy.map(shuffleOptions);
+
+  setShuffledQuestions(shuffled);
+  setCurrentIndex(0);
+ setFirstAttempts([])
+
+}, [roleId]);
 
   if (shuffledQuestions.length === 0) {
     return <div>Loading...</div>;
