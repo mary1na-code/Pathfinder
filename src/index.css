@@ -62,7 +62,6 @@
   list-style: none;
   font-family: var(--font-body);
 }
-
 html {
   font-size: 62.5%; /* 1rem = 10px baseline */
 }

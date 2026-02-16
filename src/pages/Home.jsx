@@ -1,6 +1,6 @@
-import Button from "../components/Pri-Button.jsx";
-import CardHomepage from "../components/CardHomepage.jsx";
+import CardHomepage from "../components/CardHomepage";
 import hero from "../assets/hero-image.png";
+import Button from "../components/Pri-Button";
 
 export default function Home() {
   return (
@@ -67,6 +67,4 @@ export default function Home() {
       </section>
     </main>
   );
-
-  
 }
