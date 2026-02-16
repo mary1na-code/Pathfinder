@@ -7,7 +7,7 @@ export default function Home() {
     <main className="max-w-screen flex flex-col gap-[var(--space-xl)] bg-background text-text font-body ">
 
       <section className="flex flex-col">
-    		<div className="flex flex-col gap-[var(--space-lg)] sec-1_imagetext_container">
+    		<div className="flex flex-col  sec-1_imagetext_container">
     			<div className="w-full md:w-full sec-1_text-container ">
     				{/* Level up tag */}
     				<div className="levelup-tag">
@@ -31,7 +31,7 @@ export default function Home() {
 					</div>
   			</div>
 
-  		  <div className="mt-space-lg flex gap-space-sm">
+  		  <div>
       	  <Button to="/roles">Get Started</Button>
     	  </div>
 
