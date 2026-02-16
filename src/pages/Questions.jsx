@@ -94,8 +94,8 @@ export default function Questions() {
       const isCorrect = selectedKey === currentQuestion.answer;
       if (wrongGuesses.length === 0) {
       // Find the text of what they just clicked
-      const choiceObj = currentQuestion.shuffledOptions.find(opt => opt.key === selectedKey);
-      const choiceText = choiceObj ? choiceObj.text : "";
+      const choicePair = currentQuestion.shuffledOptions.find(pair => pair[0] === selectedKey);
+      const choiceText = choicePair ? choicePair[1] : "";
       //save first attempt
       setFirstAttempts((prev) => [...prev, choiceText]);
       }
