@@ -70,7 +70,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   line-height: 1.6;
-  margin-top: var(--space-lg);
+  margin-top: 0;
   font-size: var(--p-size);
   font-weight: var(--p-weight);
   max-width: 100%;
@@ -78,7 +78,10 @@ body {
 }
 
 header{
-  margin-inline: var(--margin-inline-base);
+  margin-inline: var(--margin-inline-base);  
+  margin-bottom: var(--space-lg);
+  margin-top: 1rem;
+  
 }
 
 .main-content {
@@ -123,9 +126,6 @@ i{
   color: var(--color-primary);
 }
 
-nav {
-  margin-block: var(--space-lg);
-}
 
 nav a {
   color: var(--color-text);
@@ -136,9 +136,7 @@ nav a {
   margin: var(--space-sm);
 }
 
-header{
-  margin-block: var(--space-xl);
-}
+
 
 /* HOMEPAGE - this is the div that contains the "LEVEL UP YOUR CAREER" tag, homepage's headline and paragraph before the button */
 

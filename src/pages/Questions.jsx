@@ -144,8 +144,8 @@ useEffect(() => {
     <>
       <section className="question-section">
         <div className="question-section-wrapper">
-          <section className="question-title">
-            <h1>
+          <section className="question-title-section">
+            <h1 className="question-title">
               Question {currentIndex + 1}: {currentQuestion.question}
             </h1>
           </section>
