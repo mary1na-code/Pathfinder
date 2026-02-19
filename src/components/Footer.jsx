@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Repo badge / title Container */}
         <div className="flex items-center justify-start gap-space-md mb-space-lg">
           <a
-            href="https://github.com/your-org/v59-tier1-team-02"
+            href="https://github.com/chingu-voyages/V59-tier1-team-02"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-space-sm text-white no-underline"
