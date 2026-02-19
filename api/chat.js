@@ -1,4 +1,4 @@
-import { appContext } from "../backend/context/appContext";
+import { appContext } from "../lib/appContext";
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
@@ -33,11 +33,11 @@ export default function handler(req, res) {
     });
   }
 
-  {/*for (const item of appContext.faq) {
+  for (const item of appContext.faq) {
   if (item.triggers.some(trigger => lower.includes(trigger))) {
     return res.json({ response: item.answer });
   }
-}*/}
+}
 
   return res.json({
     response: "I'm not sure about that, but keep going — you’ve got this!"
