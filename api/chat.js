@@ -1,3 +1,5 @@
+import { appContext } from "../backend/context/appContext";
+
 export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
@@ -30,6 +32,12 @@ export default function handler(req, res) {
       response: `You are currently on question ${(context?.questionId ?? 0) + 1}.`
     });
   }
+
+  for (const item of appContext.faq) {
+  if (item.triggers.some(trigger => lower.includes(trigger))) {
+    return res.json({ response: item.answer });
+  }
+}
 
   return res.json({
     response: "I'm not sure about that, but keep going — you’ve got this!"
