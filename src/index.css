@@ -270,15 +270,15 @@ footer ul li span{
   }
 
   .features-cards-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (min-width: 900px) {
   .features-cards-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card-container{
